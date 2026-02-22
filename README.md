@@ -1,8 +1,94 @@
-# oTree project template
+# oTree @ Cologne 2026
 
-A modern, minimal [oTree](https://www.otree.org/) project template with modern Python tooling via [uv](https://docs.astral.sh/uv/).
+Example apps developed in my course on oTree held at the University of Cologne in 2026. *Note*: This class deals exclusively with oTree 5.11.4.
 
-## Prerequisites
+The class will be held via Zoom on February 23, 24, 25, and March 2, 3, 4 (8:30 AM CET).
+
+This repository is directly runnable as an oTree project.
+
+## Useful links
+
+- [VS Code](https://code.visualstudio.com/download)
+- [oTree project template](https://github.com/mrpg/otree-uv)
+- [Installing `uv`](https://docs.astral.sh/uv/getting-started/installation/)
+
+- *Required*: Chapters 2, 3, 4, 5 of the [official Python tutorial](https://docs.python.org/3/tutorial/)
+- *Required*: [HTML](https://www.youtube.com/watch?v=bWPMSSsVdPk)
+- Recommended: [JavaScript](https://www.youtube.com/watch?v=xwKbtUP87Dk)
+- Recommended: [CSS](https://www.youtube.com/watch?v=yfoY53QXEnI)
+
+### Further resources for learning Python
+
+- Our [python\_course](https://gitlab.com/gr0ssmann/python_course)
+- [Python](https://www.youtube.com/watch?v=BVfCWuca9nw)
+- [Python](https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
+
+### Miscellaneous
+
+- [fish](https://fishshell.com)
+- [oTree documentation](https://otree.readthedocs.io/en/latest/index.html)
+- [What is the meaning of @staticmethod?](https://www.youtube.com/watch?v=rq8cL2XMM5M)
+- [Computerphile on floating point numbers](https://www.youtube.com/watch?v=PZRI1IfStY0)
+
+## Schedule
+
+### Monday (Feb 23)
+
+1. Getting started with oTree and uv
+1. Using [black](https://github.com/psf/black)
+1. Using oTree's command line interface
+1. Creating a modern oTree project
+1. Setting up an editor
+1. Developing and running a simple app
+1. **PROJECT**: Survey
+1. Static files
+1. Fields and pages, basic validation
+
+### Tuesday (Feb 24)
+
+1. Models
+1. Subsessions, players and participants
+1. Treatments
+1. Currency
+1. Currency amounts
+1. `vars_for_template`
+1. **PROJECT**: Donation experiment
+1. App sequences
+1. Session settings
+1. `choices`
+
+### Wednesday (Feb 25)
+
+1. Basic grouping
+1. Roles
+1. Rounds
+1. WaitPages
+1. **PROJECT**: Repeated prisoner’s dilemma
+1. Chats
+1. **PROJECT**: Public goods game with feedback
+
+### Monday (Mar 2)
+
+1. Widgets
+1. Basic timeouts
+1. Templating with `if` and `for`
+1. `participant.vars`, shortcuts
+1. Dropout handling, `devserver` vs `prodserver`, `app_after_this_page`
+
+### Tuesday (Mar 3)
+
+1. `js_vars`
+1. Live Pages
+1. **PROJECT**: Surveillance game
+1. **PROJECT**: Sentinel fields
+1. `ExtraModel`, Custom exports
+
+### Wednesday (Mar 4)
+
+1. Using coding agents with oTree projects
+1. Alternatives to oTree, [uproot](https://uproot.science/)
+
+## Running this project
 
 Install `uv` (if you haven't already):
 
@@ -19,8 +105,8 @@ Install `uv` (if you haven't already):
 
 1. **Get the template** — either clone the repository:
    ```sh
-   git clone https://github.com/mrpg/otree-uv my_project
-   cd my_project
+   git clone https://github.com/mrpg/otree-class
+   cd otree-class
    ```
    or download and unzip it ([releases](https://github.com/mrpg/otree-uv/releases)), then open a terminal in the resulting folder.
 
@@ -44,53 +130,3 @@ Install `uv` (if you haven't already):
    ```
    Then open [http://localhost:8000](http://localhost:8000) in your browser.
 
-## Creating apps
-
-Create a new oTree app with:
-```sh
-uv run otree startapp my_app
-```
-
-Then register it in `settings.py` under `SESSION_CONFIGS`.
-
-## Code quality
-
-This template includes [black](https://black.readthedocs.io/), [isort](https://pycqa.github.io/isort/), and [ruff](https://docs.astral.sh/ruff/) for formatting and linting, wired up via [pre-commit](https://pre-commit.com/).
-
-Set up the git hooks once after cloning:
-```sh
-uv run pre-commit install
-```
-
-After that, formatting and linting run automatically on every commit. To run them manually at any time:
-```sh
-uv run pre-commit run --all-files
-```
-
-## Deployment on Heroku
-
-The template is ready for Heroku out of the box. Heroku detects `uv.lock` and uses uv to install dependencies, and reads the Python version from `.python-version`.
-
-### First-time setup
-
-```sh
-heroku create my-otree-app
-heroku addons:create heroku-postgresql
-```
-
-### Environment variables
-
-```sh
-heroku config:set OTREE_ADMIN_PASSWORD=choose_a_password
-heroku config:set OTREE_PRODUCTION=1
-```
-
-`DATABASE_URL` is set automatically by the Heroku Postgres addon above.
-
-### Deploy
-
-```sh
-git push heroku main
-```
-
-The `Procfile` runs oTree's production server as a single `web` dyno — no Redis or worker dyno needed in oTree 5.
