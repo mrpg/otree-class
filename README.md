@@ -19,7 +19,6 @@ This repository is directly runnable as an oTree project.
 
 ### Further resources for learning Python
 
-- Our [python\_course](https://gitlab.com/gr0ssmann/python_course)
 - [Python](https://www.youtube.com/watch?v=BVfCWuca9nw)
 - [Python](https://www.youtube.com/watch?v=ZDa-Z5JzLYM)
 
@@ -35,24 +34,24 @@ This repository is directly runnable as an oTree project.
 ### Monday (Feb 23)
 
 1. Getting started with oTree and uv
-1. Using [black](https://github.com/psf/black)
-1. Using oTree's command line interface
 1. Creating a modern oTree project
+1. Using oTree's command line interface
 1. Setting up an editor
 1. Developing and running a simple app
+1. Basic fields
 1. **PROJECT**: Survey
+1. Using [black](https://github.com/psf/black)
 1. Static files
-1. Fields and pages, basic validation
+1. Treatments
+1. **PROJECT**: Framed donation experiment
 
 ### Tuesday (Feb 24)
 
 1. Models
 1. Subsessions, players and participants
-1. Treatments
 1. Currency
 1. Currency amounts
 1. `vars_for_template`
-1. **PROJECT**: Donation experiment
 1. App sequences
 1. Session settings
 1. `choices`
