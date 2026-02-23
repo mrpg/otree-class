@@ -12,10 +12,10 @@ This repository is directly runnable as an oTree project.
 - [oTree project template](https://github.com/mrpg/otree-uv)
 - [Installing `uv`](https://docs.astral.sh/uv/getting-started/installation/)
 
-- *Required*: Chapters 2, 3, 4, 5 of the [official Python tutorial](https://docs.python.org/3/tutorial/)
-- *Required*: [HTML](https://www.youtube.com/watch?v=bWPMSSsVdPk)
-- Recommended: [JavaScript](https://www.youtube.com/watch?v=xwKbtUP87Dk)
-- Recommended: [CSS](https://www.youtube.com/watch?v=yfoY53QXEnI)
+- Chapters 2, 3, 4, 5 of the [official Python tutorial](https://docs.python.org/3/tutorial/)
+- [HTML](https://www.youtube.com/watch?v=bWPMSSsVdPk)
+- [JavaScript](https://www.youtube.com/watch?v=xwKbtUP87Dk)
+- [CSS](https://www.youtube.com/watch?v=yfoY53QXEnI)
 
 ### Further resources for learning Python
 
@@ -115,17 +115,8 @@ Install `uv` (if you haven't already):
    ```
    This creates a virtual environment and installs oTree and all dev tools automatically. No manual `pip install` or `venv` setup needed.
 
-3. **Prepare git repository:**
-   *If and only if you used* `git clone` *to obtain this template*, run:
-   ```sh
-   uv run pre-commit install
-   git remote remove origin
-   ```
-   Otherwise, just skip this step.
-
-4. **Run the development server:**
+3. **Run the development server:**
    ```sh
    uv run otree devserver
    ```
    Then open [http://localhost:8000](http://localhost:8000) in your browser.
-

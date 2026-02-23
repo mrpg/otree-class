@@ -1,0 +1,57 @@
+{{ block title }}
+Slides for oTree @ UoC (2026)
+{{ endblock }}
+{{ block content }}
+
+    <style>
+        @import url("{{ static 'tabs/tabs.css' }}");
+
+        .otree-title {
+            display: none;
+        }
+        #tabs {
+            margin-top: 1em;
+        }
+    </style>
+
+    <script src="{{ static 'tabs/tabs.js' }}"></script>
+
+    <script>
+        $(document).ready(function () {
+            tabinit();
+            tabshow(1);
+        });
+    </script>
+
+    <div id="tabs">
+        <button type="button" data-tab="1" class="tab">1</button>
+        <button type="button" data-tab="2" class="tab">2</button>
+        <button type="button" data-tab="3" class="tab">3</button>
+        <button type="button" data-tab="4" class="tab">4</button>
+        <button type="button" data-tab="5" class="tab">5</button>
+    </div>
+
+    <div class="tabbable" id="tabbable1">
+        <p><b>Welcome!</b></p>
+    </div>
+
+    <div class="tabbable" id="tabbable2">
+        <p>2</p>
+    </div>
+
+    <div class="tabbable" id="tabbable3">
+        <p>3</p>
+    </div>
+
+    <div class="tabbable" id="tabbable4">
+        <p>4</p>
+    </div>
+
+    <div class="tabbable" id="tabbable5">
+        <p>5</p>
+
+        {{ formfields }}
+        {{ next_button }}
+    </div>
+
+{{ endblock }}
