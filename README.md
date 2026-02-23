@@ -42,12 +42,12 @@ This repository is directly runnable as an oTree project.
 1. **PROJECT**: Survey
 1. Using [black](https://github.com/psf/black)
 1. Static files
-1. Treatments
-1. **PROJECT**: Framed donation experiment
 
 ### Tuesday (Feb 24)
 
 1. Models
+1. Treatments, `creating_session`
+1. **PROJECT**: Framed donation experiment
 1. Subsessions, players and participants
 1. Currency
 1. Currency amounts
