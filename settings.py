@@ -6,6 +6,11 @@ SESSION_CONFIGS = [
         app_sequence=["slides"],
         num_demo_participants=1,
     ),
+    dict(
+        name="just_the_survey",
+        app_sequence=["survey"],
+        num_demo_participants=1,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
