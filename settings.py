@@ -1,6 +1,11 @@
 from os import environ
 
 SESSION_CONFIGS = [
+    dict(
+        name="slides",
+        app_sequence=["slides"],
+        num_demo_participants=1,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
