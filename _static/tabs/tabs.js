@@ -35,13 +35,13 @@ function tabinit() {
 
     for (i = 0; i < tabbable.length; i++) {
         if (tabbable[i].id == "tabbable1") {
-            tabbable[i].innerHTML += "<p class='navbox'><span class='navright'><button onclick='right()' type='button' class='btn btn-primary'>Weiter</button></span></p>";
+            tabbable[i].innerHTML += "<p class='navbox'><span class='navright'><button onclick='right()' type='button' class='btn btn-primary'>Next</button></span></p>";
         }
         else if (tabbable[i].id == "tabbable" + tabbable.length) {
-            tabbable[i].innerHTML += "<p class='navbox'><button onclick='left()' type='button' class='btn btn-secondary'>Zurück</button></p>";
+            tabbable[i].innerHTML += "<p class='navbox'><button onclick='left()' type='button' class='btn btn-secondary'>Back</button></p>";
         }
         else {
-            tabbable[i].innerHTML += "<p class='navbox'><button onclick='left()' type='button' class='btn btn-secondary'>Zurück</button><span class='navright'><button onclick='right()' type='button' class='btn btn-primary'>Weiter</button></span></p>";
+            tabbable[i].innerHTML += "<p class='navbox'><button onclick='left()' type='button' class='btn btn-secondary'>Back</button><span class='navright'><button onclick='right()' type='button' class='btn btn-primary'>Next</button></span></p>";
         }
     }
 
