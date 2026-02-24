@@ -11,6 +11,16 @@ SESSION_CONFIGS = [
         app_sequence=["survey"],
         num_demo_participants=1,
     ),
+    dict(
+        name="donation_game",
+        app_sequence=["donation"],
+        num_demo_participants=1,
+    ),
+    dict(
+        name="my_little_donation_experiment",
+        app_sequence=["survey", "donation"],  # <- oTree apps are composable
+        num_demo_participants=1,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
@@ -37,8 +47,8 @@ SESSION_FIELDS = []
 LANGUAGE_CODE = "en"
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = "USD"
-USE_POINTS = True
+REAL_WORLD_CURRENCY_CODE = "EUR"
+USE_POINTS = False
 
 ADMIN_USERNAME = "admin"
 # for security, best to set admin password in an environment variable
