@@ -4,7 +4,7 @@ Example apps developed in my course on oTree held at the University of Cologne i
 
 The class will be held via Zoom on February 23, 24, 25, and March 2, 3, 4 (8:30 AM CET).
 
-This repository is directly runnable as an oTree project.
+This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`.
 
 ## Useful links
 

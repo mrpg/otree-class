@@ -29,15 +29,22 @@ Slides for oTree @ UoC (2026)
         <button type="button" data-tab="3" class="tab">3</button>
         <button type="button" data-tab="4" class="tab">4</button>
         <button type="button" data-tab="5" class="tab">5</button>
+        <button type="button" data-tab="6" class="tab">6</button>
     </div>
 
     <div class="tabbable" id="tabbable1">
-        <p><b>Welcome!</b></p>
-        <p>Please install uv and VS Code. See <a href="https://github.com/mrpg/otree-class">here</a>.</p>
+        <ul>
+            <li><b>Welcome!</b></li>
+            <li>Please install uv and VS Code. See <a href="https://github.com/mrpg/otree-class">here</a>.</li>
+        </ul>
     </div>
 
     <div class="tabbable" id="tabbable2">
-        <p>2</p>
+        <ul>
+            <li><a href="https://otree.readthedocs.io/en/latest/conceptual_overview.html">oTree’s conceptual overview</a></li>
+            <li><a href="https://getbootstrap.com/docs/5.3/utilities/spacing/">Bootstrap margins</a></li>
+            <li><code>vars_for_template</code> is banned! You don’t need it. Use <code>@property</code>!</li>
+        </ul>
     </div>
 
     <div class="tabbable" id="tabbable3">
@@ -50,6 +57,10 @@ Slides for oTree @ UoC (2026)
 
     <div class="tabbable" id="tabbable5">
         <p>5</p>
+    </div>
+
+    <div class="tabbable" id="tabbable6">
+        <p>6</p>
 
         {{ formfields }}
         {{ next_button }}
