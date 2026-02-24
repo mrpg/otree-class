@@ -49,27 +49,29 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Treatments, `creating_session`
 1. **PROJECT**: Framed donation experiment
 1. Subsessions, players and participants
-1. Currency
-1. Currency amounts
-1. `vars_for_template`
+1. Currency, points, currency amounts
+1. Constants
+1. `vars_for_template` is banned, use `@property`
 1. App sequences
-1. Session settings
-1. `choices`
 
 ### Wednesday (Feb 25)
 
+1. More on fields
+1. `choices`
 1. Basic grouping
 1. Roles
+1. **PROJECT**: Dictator game
 1. Rounds
-1. WaitPages
 1. **PROJECT**: Repeated prisoner’s dilemma
+1. WaitPages
 1. Chats
+1. Basic timeouts
 1. **PROJECT**: Public goods game with feedback
 
 ### Monday (Mar 2)
 
+1. Session settings
 1. Widgets
-1. Basic timeouts
 1. Templating with `if` and `for`
 1. `participant.vars`, shortcuts
 1. Dropout handling, `devserver` vs `prodserver`, `app_after_this_page`
