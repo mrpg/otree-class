@@ -4,7 +4,7 @@ Example apps developed in my course on oTree held at the University of Cologne i
 
 The class will be held via Zoom on February 23, 24, 25, and March 2, 3, 4 (8:30 AM CET).
 
-This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`.
+This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`, `dictator\_game`.
 
 ## Useful links
 
@@ -60,21 +60,22 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. `choices`
 1. Basic grouping
 1. Roles
+1. WaitPages
 1. **PROJECT**: Dictator game
 1. Rounds
 1. **PROJECT**: Repeated prisoner’s dilemma
-1. WaitPages
-1. Chats
-1. Basic timeouts
-1. **PROJECT**: Public goods game with feedback
 
 ### Monday (Mar 2)
 
+1. Paying for one or all rounds
+1. Basic timeouts
+1. **PROJECT**: Public goods game with feedback
 1. Session settings
 1. Widgets
 1. Templating with `if` and `for`
 1. `participant.vars`, shortcuts
 1. Dropout handling, `devserver` vs `prodserver`, `app_after_this_page`
+1. Chats
 
 ### Tuesday (Mar 3)
 

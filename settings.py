@@ -21,6 +21,16 @@ SESSION_CONFIGS = [
         app_sequence=["survey", "donation"],  # <- oTree apps are composable
         num_demo_participants=1,
     ),
+    dict(
+        name="dictator_game",
+        app_sequence=["dictator_game"],
+        num_demo_participants=2,
+    ),
+    dict(
+        name="prisoners_dilemma",
+        app_sequence=["pd"],
+        num_demo_participants=2,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
