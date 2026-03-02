@@ -56,7 +56,15 @@ Slides for oTree @ UoC (2026)
     </div>
 
     <div class="tabbable" id="tabbable4">
-        <p>4</p>
+        <ul>
+            <li><b>RULE</b>: If a timeout happens, then the fields associated with the page on which the timeout
+                happened are set to the <i>default value</i> of the associated type&mdash;but only if the field
+                was previously <code>None</code>. For example, a <code>BooleanField</code> has the associated type
+            <code>bool</code>, which has the default value <code>bool() == False</code>.</li>
+            <li>Note: Dropout handling can be augmented with <code>app_after_this_page</code>.</li>
+            <li>The <code>devserver</code> does not notice timeouts when the browser tab is closed, but the
+            <code>prodserver</code> does.</li>
+        </ul>
     </div>
 
     <div class="tabbable" id="tabbable5">

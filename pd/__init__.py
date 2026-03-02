@@ -35,6 +35,10 @@ class Player(BasePlayer):
         ],
     )
 
+    timed_out = models.BooleanField(
+        initial=False,
+    )
+
     @property
     def partner(self):
         # This works because:
@@ -43,14 +47,47 @@ class Player(BasePlayer):
         # BAZINGA!
         return self.group.get_player_by_id(3 - self.id_in_group)
 
+    @property
+    def ever_dropped_out(self):
+        # Any, are you OK? Are you OK, any?
+        return any(p.timed_out for p in self.in_rounds(1, self.round_number))
+
+    @property
+    def partner_ever_dropped_out(self):
+        return any(
+            p.timed_out for p in self.partner.in_rounds(1, self.partner.round_number)
+        )
+
 
 # PAGES
+@staticmethod
+def group_still_alive(player):
+    # Helper method for use in multiple Pages.
+    # Don’t Repeat Yourself (DRY).
+    # Neither I nor my partner must have dropped out, EVER.
+    return not (player.ever_dropped_out or player.partner_ever_dropped_out)
+
+
+class Discuss(Page):
+    is_displayed = group_still_alive
+
+
 class Decide(Page):
     form_fields = ["cooperate"]
     form_model = "player"  # Not group!
+    timeout_seconds = 10
+    is_displayed = group_still_alive
+
+    @staticmethod
+    def before_next_page(player, timeout_happened):
+        if timeout_happened:
+            print(f"{player} timed out!")
+            player.timed_out = True
 
 
 class ResultsWaitPage(WaitPage):
+    is_displayed = group_still_alive
+
     @staticmethod
     def after_all_players_arrive(group):
         player1 = group.get_player_by_id(1)
@@ -71,7 +108,19 @@ class ResultsWaitPage(WaitPage):
 
 
 class Results(Page):
-    pass
+    is_displayed = group_still_alive
+
+    @staticmethod
+    def before_next_page(player, timeout_happened):
+        if player.round_number == C.NUM_ROUNDS:  # Only run in final round
+            import random
+
+            # Note: my_round disappears without a trace after this method runs, so …
+            my_round = random.randint(1, C.NUM_ROUNDS)
+
+            # … better save it in participant.vars:
+            player.participant.vars["round_selected_for_payment"] = my_round
+            player.participant.payoff = player.in_round(my_round).payoff
 
 
 class FinalResults(Page):
@@ -81,6 +130,7 @@ class FinalResults(Page):
 
 
 page_sequence = [
+    Discuss,
     Decide,
     ResultsWaitPage,
     Results,

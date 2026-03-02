@@ -68,17 +68,18 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 ### Monday (Mar 2)
 
 1. Paying for one or all rounds
-1. Basic timeouts
-1. **PROJECT**: Public goods game with feedback
-1. Session settings
-1. Widgets
-1. Templating with `if` and `for`
 1. `participant.vars`, shortcuts
-1. Dropout handling, `devserver` vs `prodserver`, `app_after_this_page`
+1. Basic timeouts
+1. Dropout handling, `devserver` vs `prodserver`
 1. Chats
+1. Templating with `if` and `for`
+1. **PROJECT**: Public goods game with history table
 
 ### Tuesday (Mar 3)
 
+1. Session settings
+1. Rooms, labels
+1. Widgets
 1. `js_vars`
 1. Live Pages
 1. **PROJECT**: Surveillance game

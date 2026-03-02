@@ -31,6 +31,11 @@ SESSION_CONFIGS = [
         app_sequence=["pd"],
         num_demo_participants=2,
     ),
+    dict(
+        name="pgg",
+        app_sequence=["pgg"],
+        num_demo_participants=3,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
@@ -45,7 +50,7 @@ SESSION_CONFIGS = [
 
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00,
-    participation_fee=0.00,
+    participation_fee=3.50,
     doc="",
 )
 
