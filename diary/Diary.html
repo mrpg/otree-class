@@ -1,0 +1,33 @@
+{{ block title }}
+    {% if player.role == C.ROLE_WRITER %}
+    Please write your diary entry
+    {% else %}
+    Please watch
+    {% endif %}
+{{ endblock }}
+{{ block content }}
+
+    <!--  This you may learn by searching for "Bootstrap textarea"           -->
+    <!--                                     vvvvvvvvvvvv                    -->
+    <textarea name="entry" id="entry" class="form-control mb-5" rows="10"></textarea>
+
+    {{ next_button }}
+
+    <script>
+        let entry = document.querySelector("#entry");
+
+        if (js_vars.is_watcher) {
+            entry.readOnly = true;
+        }
+        else {
+            entry.oninput = function () {
+                liveSend(entry.value);
+            }
+        }
+
+        function liveRecv(data) {
+            entry.value = data;
+        }
+    </script>
+
+{{ endblock }}

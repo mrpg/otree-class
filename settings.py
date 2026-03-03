@@ -36,11 +36,24 @@ SESSION_CONFIGS = [
         app_sequence=["pgg"],
         num_demo_participants=3,
     ),
+    dict(
+        name="diary",
+        app_sequence=["diary"],
+        num_demo_participants=2,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
     #     num_demo_participants=3,
     # ),
+]
+
+ROOMS = [
+    dict(
+        name="simple_room",
+        display_name="simple_room",
+        participant_label_file="_rooms/my_labels.txt",  # oTree will authenticate participants!
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs

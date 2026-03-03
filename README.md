@@ -77,17 +77,18 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 
 ### Tuesday (Mar 3)
 
-1. Session settings
 1. Rooms, labels
 1. Widgets
-1. `js_vars`
+1. **PROJECT**: Ultimatum game
 1. Live Pages
+1. `js_vars`
 1. **PROJECT**: Surveillance game
-1. **PROJECT**: Sentinel fields
-1. `ExtraModel`, Custom exports
 
 ### Wednesday (Mar 4)
 
+1. **PROJECT**: Stroop task with sentinel fields
+1. `ExtraModel`, Custom exports
+1. Session settings
 1. Using coding agents with oTree projects
 1. Alternatives to oTree, [uproot](https://uproot.science/)
 

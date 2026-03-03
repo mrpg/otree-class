@@ -33,6 +33,7 @@ class Player(BasePlayer):
             [True, "Cooperate"],
             [False, "Defect"],
         ],
+        widget=widgets.RadioSelectHorizontal,
     )
 
     timed_out = models.BooleanField(
@@ -75,7 +76,7 @@ class Discuss(Page):
 class Decide(Page):
     form_fields = ["cooperate"]
     form_model = "player"  # Not group!
-    timeout_seconds = 10
+    timeout_seconds = 120
     is_displayed = group_still_alive
 
     @staticmethod
