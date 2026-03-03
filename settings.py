@@ -37,6 +37,11 @@ SESSION_CONFIGS = [
         num_demo_participants=3,
     ),
     dict(
+        name="ultimatum",
+        app_sequence=["ultimatum"],
+        num_demo_participants=2,
+    ),
+    dict(
         name="diary",
         app_sequence=["diary"],
         num_demo_participants=2,
