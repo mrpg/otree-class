@@ -4,7 +4,7 @@ Example apps developed in my course on oTree held at the University of Cologne i
 
 The class will be held via Zoom on February 23, 24, 25, and March 2, 3, 4 (8:30 AM CET).
 
-This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`, `dictator\_game`, `pd`, `pgg`, `ultimatum`, `diary`.
+This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`, `dictator\_game`, `pd`, `pgg`, `ultimatum`, `diary`, `conjoint`.
 
 ## Useful links
 
@@ -88,8 +88,8 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 
 1. **PROJECT**: Conjoint experiment with sentinel fields
 1. `ExtraModel`, Custom exports
-1. Session settings
-1. Using coding agents with oTree projects
+1. Session configs
+1. Using coding agents (Claude Code) with oTree projects
 1. Alternatives to oTree, [uproot](https://uproot.science/)
 
 ## Running this project
