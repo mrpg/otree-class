@@ -77,6 +77,13 @@ class Donation(Page):
     form_model = "player"
 
     @staticmethod
+    def js_vars(player):
+        return {
+            "min": 0,
+            "max": C.ENDOWMENT,
+        }
+
+    @staticmethod
     def before_next_page(player, timeout_happened):
         player.payoff = C.ENDOWMENT - player.donation_amount
 

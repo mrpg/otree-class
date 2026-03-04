@@ -86,7 +86,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 
 ### Wednesday (Mar 4)
 
-1. **PROJECT**: Stroop task with sentinel fields
+1. **PROJECT**: Conjoint experiment with sentinel fields
 1. `ExtraModel`, Custom exports
 1. Session settings
 1. Using coding agents with oTree projects

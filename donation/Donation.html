@@ -11,10 +11,22 @@
 
     <!-- This is a custom raw HTML widget: -->
     <label for="donation_amount">How much would you like to donate?</label><br>
-    <input type="range" min="0" max="25" step="0.50" name="donation_amount" id="donation_amount">
-    <!-- TODO: Dynamically output the min/max -->
+    <input type="range" step="0.50" name="donation_amount" id="donation_amount">
+    <p>Currently selected: €<span id="slider_value"></span></p>
+
+    <script>
+        let slider = document.getElementById("donation_amount");
+        slider.min = js_vars.min;
+        slider.max = js_vars.max;
+        slider.value = js_vars.min;
+
+        let display = document.getElementById("slider_value");
+        display.innerText = slider.value;
+
+        slider.addEventListener("input", function () {
+            display.innerText = this.value;
+        });
+    </script>
 
     {{ next_button }}
 {{ endblock }}
-
-

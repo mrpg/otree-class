@@ -78,7 +78,6 @@ class Accept(Page):
 class ResultsWaitPage(WaitPage):
     @staticmethod
     def after_all_players_arrive(group):
-
         if group.accept:
             group.proposer.payoff = C.PROPOSER_ENDOWMENT - group.amount_given
             group.recipient.payoff = group.amount_given

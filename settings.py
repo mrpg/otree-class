@@ -46,6 +46,12 @@ SESSION_CONFIGS = [
         app_sequence=["diary"],
         num_demo_participants=2,
     ),
+    dict(
+        name="conjoint",
+        app_sequence=["conjoint"],
+        num_demo_participants=1,
+        n_pairs=5,
+    ),
     # dict(
     #     name="public_goods",
     #     app_sequence=["public_goods"],
@@ -72,7 +78,9 @@ SESSION_CONFIG_DEFAULTS = dict(
     doc="",
 )
 
-PARTICIPANT_FIELDS = []
+PARTICIPANT_FIELDS = [
+    "my_var"
+]  # player.participant.my_var instead of player.participant.vars["my_var"]
 SESSION_FIELDS = []
 
 # ISO-639 code
