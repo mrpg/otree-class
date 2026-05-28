@@ -1,10 +1,10 @@
-# oTree @ Cologne 2026
+# oTree @ Melbourne 2026
 
-Example apps developed in my course on oTree held at the University of Cologne in 2026. *Note*: This class deals exclusively with oTree 5.11.4.
+Example apps developed in my course on oTree held at The University of Melbourne in 2026. *Note*: This class deals exclusively with oTree 5.11.5.
 
-The class will be held via Zoom on February 23, 24, 25, and March 2, 3, 4 (8:30 AM CET).
+The class will be held via Zoom on June 1, 2, 3, 4, and 5 (3 PM AET).
 
-This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`, `dictator\_game`, `pd`, `pgg`, `ultimatum`, `diary`, `conjoint`.
+This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: TODO.
 
 ## Useful links
 
@@ -31,11 +31,11 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 
 ## Schedule
 
-### Monday (Feb 23)
+### Monday (June 1)
 
 1. Getting started with oTree and uv
 1. Creating a modern oTree project
-1. Using oTree's command line interface
+1. Using oTree’s command line interface
 1. Setting up an editor
 1. Developing and running a simple app
 1. Basic fields
@@ -43,7 +43,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Using [black](https://github.com/psf/black)
 1. Static files
 
-### Tuesday (Feb 24)
+### Tuesday (June 2)
 
 1. Models
 1. Treatments, `creating_session`
@@ -53,39 +53,36 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Constants
 1. `vars_for_template` is banned, use `@property`
 1. App sequences
-
-### Wednesday (Feb 25)
-
 1. More on fields
 1. `choices`
+
+### Wednesday (June 3)
+
 1. Basic grouping
 1. Roles
 1. WaitPages
 1. **PROJECT**: Dictator game
 1. Rounds
 1. **PROJECT**: Repeated prisoner’s dilemma
-
-### Monday (Mar 2)
-
 1. Paying for one or all rounds
 1. `participant.vars`, shortcuts
+
+### Thursday (June 4)
+
 1. Basic timeouts
 1. Dropout handling, `devserver` vs `prodserver`
 1. Chats
 1. Templating with `if` and `for`
 1. **PROJECT**: Public goods game with history table
-
-### Tuesday (Mar 3)
-
 1. Rooms, labels
 1. Widgets
 1. **PROJECT**: Ultimatum game
+
+### Friday (June 5)
+
 1. Live Pages
 1. `js_vars`
 1. **PROJECT**: Surveillance game
-
-### Wednesday (Mar 4)
-
 1. **PROJECT**: Conjoint experiment with sentinel fields
 1. `ExtraModel`, Custom exports
 1. Session configs
