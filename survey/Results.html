@@ -1,0 +1,27 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>
+        Hello, {{ player.name }}!
+        You are {{ player.age }} years old.
+    </p>
+
+    {% if player.age > 80 %}
+    <p>
+        Pretty good, pretty good!
+    </p>
+    {% endif %}
+
+    <p>Here is a picture of a dolphin:</p>
+
+    <img
+        width="100%"
+        src="{{ static 'dolphins.jpg' }}"
+        class="mb-5"
+    >
+
+    {{ next_button }}
+{{ endblock }}
