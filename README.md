@@ -39,6 +39,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Setting up an editor
 1. Developing and running a simple app
 1. Basic fields
+1. **BREAKOUT**: Build a "Fun Facts Quiz" — a single-page app with 3 creative trivia questions using different field types
 1. **PROJECT**: Survey
 1. Using [black](https://github.com/psf/black)
 1. Static files
@@ -50,6 +51,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. **PROJECT**: Framed donation experiment
 1. Subsessions, players and participants
 1. Currency, points, currency amounts
+1. **BREAKOUT**: Build a "Product Rating" app — a treatment (set in `creating_session`) changes the product shown, and players rate it 1–5
 1. Constants
 1. `vars_for_template` is banned, use `@property`
 1. App sequences
@@ -62,6 +64,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Roles
 1. WaitPages
 1. **PROJECT**: Dictator game
+1. **BREAKOUT**: Build a "Rock-Paper-Scissors" game — simultaneous choices, a WaitPage, and a results page
 1. Rounds
 1. **PROJECT**: Repeated prisoner’s dilemma
 1. Paying for one or all rounds
@@ -73,6 +76,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Dropout handling, `devserver` vs `prodserver`
 1. Chats
 1. Templating with `if` and `for`
+1. **BREAKOUT**: Build a "Chat Negotiation" — two players chat and agree on a number, with a timeout
 1. **PROJECT**: Public goods game with history table
 1. Rooms, labels
 1. Widgets
@@ -83,6 +87,7 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Live Pages
 1. `js_vars`
 1. **PROJECT**: Surveillance game
+1. **BREAKOUT**: Build a "Live Poll" — players vote on a question and see results update in real-time
 1. **PROJECT**: Conjoint experiment with sentinel fields
 1. `ExtraModel`, Custom exports
 1. Session configs
