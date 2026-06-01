@@ -6,57 +6,6 @@ SESSION_CONFIGS = [
         app_sequence=["slides"],
         num_demo_participants=1,
     ),
-    dict(
-        name="just_the_survey",
-        app_sequence=["survey"],
-        num_demo_participants=1,
-    ),
-    dict(
-        name="donation_game",
-        app_sequence=["donation"],
-        num_demo_participants=1,
-    ),
-    dict(
-        name="my_little_donation_experiment",
-        app_sequence=["survey", "donation"],  # <- oTree apps are composable
-        num_demo_participants=1,
-    ),
-    dict(
-        name="dictator_game",
-        app_sequence=["dictator_game"],
-        num_demo_participants=2,
-    ),
-    dict(
-        name="prisoners_dilemma",
-        app_sequence=["pd"],
-        num_demo_participants=2,
-    ),
-    dict(
-        name="pgg",
-        app_sequence=["pgg"],
-        num_demo_participants=3,
-    ),
-    dict(
-        name="ultimatum",
-        app_sequence=["ultimatum"],
-        num_demo_participants=2,
-    ),
-    dict(
-        name="diary",
-        app_sequence=["diary"],
-        num_demo_participants=2,
-    ),
-    dict(
-        name="conjoint",
-        app_sequence=["conjoint"],
-        num_demo_participants=1,
-        n_pairs=5,
-    ),
-    # dict(
-    #     name="public_goods",
-    #     app_sequence=["public_goods"],
-    #     num_demo_participants=3,
-    # ),
 ]
 
 ROOMS = [
