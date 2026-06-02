@@ -47,16 +47,16 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 ### Tuesday (June 2)
 
 1. Models
-1. Treatments, `creating_session`
-1. **PROJECT**: Framed donation experiment
 1. Subsessions, players and participants
+1. Treatments, `creating_session`
+1. More on fields
+1. `choices`
+1. **PROJECT**: Framed donation experiment
 1. Currency, points, currency amounts
-1. **BREAKOUT**: Build a "Product Rating" app — a treatment (set in `creating_session`) changes the product shown, and players rate it 1–5
 1. Constants
 1. `vars_for_template` is banned, use `@property`
 1. App sequences
-1. More on fields
-1. `choices`
+1. **BREAKOUT**: Build a "Product Rating" app — a treatment (set in `creating_session`) changes the product shown, and players rate it 1–5
 
 ### Wednesday (June 3)
 
