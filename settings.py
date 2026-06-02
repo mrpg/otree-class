@@ -11,6 +11,11 @@ SESSION_CONFIGS = [
         app_sequence=["survey"],
         num_demo_participants=1,
     ),
+    dict(
+        name="donation",
+        app_sequence=["donation"],
+        num_demo_participants=1,
+    ),
 ]
 
 ROOMS = [
@@ -27,8 +32,8 @@ ROOMS = [
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00,
-    participation_fee=3.50,
+    real_world_currency_per_point=2.50,
+    participation_fee=7.00,
     doc="",
 )
 
@@ -42,7 +47,7 @@ SESSION_FIELDS = []
 LANGUAGE_CODE = "en"
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = "EUR"
+REAL_WORLD_CURRENCY_CODE = "AUD"
 USE_POINTS = False
 
 ADMIN_USERNAME = "admin"

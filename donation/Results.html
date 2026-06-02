@@ -1,0 +1,24 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>You chose the following charity: <i>{{ player.charity }}</i></p>
+
+    {% if player.treatment == "give" %}
+    <p>You chose to give {{ player.donation }} to the charity.</p>
+    {% else %}
+    <p>You allowed the charity to keep {{ player.donation }}.</p>
+    {% endif %}
+
+    <p>The charity will receive {{ player.amount_received_by_charity }}.</p>
+
+    <p>You receive {{ player.payoff }}.</p>
+
+    <p><b>Your final payoff in real-world currency is {{ participant.payoff_plus_participation_fee() }}.</b></p>
+
+    {{ next_button }}
+{{ endblock }}
+
+

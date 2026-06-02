@@ -1,0 +1,29 @@
+{{ block title }}
+    Please decide
+{{ endblock }}
+{{ block content }}
+
+    {% if player.treatment == "give" %}
+    <p>
+        You are given {{ C.ENDOWMENT }}.
+        Please decide how much money to donate to a charity.
+        Each dollar you give will be subtracted from your endowment.
+        <b>However, we multiply each dollar you give by {{ C.MULTIPLIER }} and send the resulting amount to the charity.</b>
+    </p>
+
+    <p>Please enter how much to give to the charity.</p>
+    {% else %}
+    <p>
+        A charity is given {{ C.ENDOWMENT }}.
+        Please decide how much to let the charity keep.
+        Each dollar the charity keeps is subtracted from your earnings.
+        <b>However, we multiply each dollar the charity keeps by {{ C.MULTIPLIER }} before sending it to them.</b>
+    </p>
+
+    <p>Please enter how much to let the charity keep.</p>
+    {% endif %}
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}
