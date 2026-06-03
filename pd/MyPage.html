@@ -1,0 +1,11 @@
+{{ block title }}
+    Please decide
+{{ endblock }}
+{{ block content }}
+
+    <p>This is <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

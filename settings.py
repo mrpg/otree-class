@@ -16,6 +16,21 @@ SESSION_CONFIGS = [
         app_sequence=["donation"],
         num_demo_participants=1,
     ),
+    dict(
+        name="dictator_game",
+        app_sequence=["dictator_game"],
+        num_demo_participants=2,  # <- THIS IS IMPORTANT
+    ),
+    dict(
+        name="ultimatum_game",
+        app_sequence=["ultimatum_game"],
+        num_demo_participants=2,
+    ),
+    dict(
+        name="pd",
+        app_sequence=["pd"],
+        num_demo_participants=2,
+    ),
 ]
 
 ROOMS = [

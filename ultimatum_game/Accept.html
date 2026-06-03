@@ -1,0 +1,12 @@
+{{ block title }}
+    Please decide
+{{ endblock }}
+{{ block content }}
+
+    <p>The proposer offered you <b>{{ group.offer }}</b>.
+        If you accept, the offer will be implemented (and the proposer will keep <b>{{ group.amount_kept }}</b>!). If you do not accept, both players receive 0.</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

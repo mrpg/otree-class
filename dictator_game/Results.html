@@ -1,0 +1,21 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>The dictator sent {{ group.amount_sent }}.</p>
+
+    {% if player.role == C.ROLE_DICTATOR %}
+    <p>You were the dictator.</p>
+    {% else %}
+    <p>You were the recipient.</p>
+    {% endif %}
+
+    <p><b>Your payoff from today's experiment is
+        {{ player.payoff }}.</b></p>
+
+    {{ next_button }}
+{{ endblock }}
+
+

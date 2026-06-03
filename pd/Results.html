@@ -1,0 +1,26 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>This was <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+
+    {% if player.cooperate %}
+    <p>You <b>cooperated</b>.</p>
+    {% else %}
+    <p>You <b>defected</b>.</p>
+    {% endif %}
+
+    {% if player.partner_cooperate %}
+    <p>Your partner <b>cooperated</b>.</p>
+    {% else %}
+    <p>Your partner <b>defected</b>.</p>
+    {% endif %}
+
+    <p>Your payoff is {{ player.payoff }}.</p>
+
+    {{ next_button }}
+{{ endblock }}
+
+

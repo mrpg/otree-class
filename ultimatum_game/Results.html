@@ -1,0 +1,22 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>The proposer offered {{ group.offer }} to the responder, and the dictator would receive {{ group.amount_kept }}.</p>
+
+    {% if group.accept %}
+    <p>The responder accepted.</p>
+    {% else %}
+    <p>The responder did not accept.</p>
+    {% endif %}
+
+    <p>You were the {{ player.role }}.</p>
+
+    <p>Your final payoff is <i>{{ player.payoff }}</i>.</p>
+
+    {{ next_button }}
+{{ endblock }}
+
+
