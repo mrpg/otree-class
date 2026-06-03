@@ -4,7 +4,7 @@ Example apps developed in my course on oTree held at The University of Melbourne
 
 The class will be held via Zoom on June 1, 2, 3, 4, and 5 (3 PM AET).
 
-This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: TODO.
+This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`.
 
 ## Useful links
 
@@ -64,11 +64,12 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Roles
 1. WaitPages
 1. **PROJECT**: Dictator game
-1. **BREAKOUT**: Build a "Rock-Paper-Scissors" game — simultaneous choices, a WaitPage, and a results page
+1. **PROJECT**: Ultimatum game
 1. Rounds
 1. **PROJECT**: Repeated prisoner’s dilemma
 1. Paying for one or all rounds
 1. `participant.vars`, shortcuts
+1. **BREAKOUT**: Build a "Rock-Paper-Scissors" game — simultaneous choices, a WaitPage, and a results page
 
 ### Thursday (June 4)
 
