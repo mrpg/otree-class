@@ -67,28 +67,25 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. **PROJECT**: Ultimatum game
 1. Rounds
 1. **PROJECT**: Repeated prisoner’s dilemma
-1. Paying for one or all rounds
-1. `participant.vars`, shortcuts
-1. **BREAKOUT**: Build a "Rock-Paper-Scissors" game — simultaneous choices, a WaitPage, and a results page
+1. ~~**BREAKOUT**: Build a "Rock-Paper-Scissors" game — simultaneous choices, a WaitPage, and a results page~~
 
 ### Thursday (June 4)
 
+1. Paying for one or all rounds
+1. `participant.vars`, shortcuts
 1. Basic timeouts
 1. Dropout handling, `devserver` vs `prodserver`
 1. Chats
 1. Templating with `if` and `for`
-1. **BREAKOUT**: Build a "Chat Negotiation" — two players chat and agree on a number, with a timeout
 1. **PROJECT**: Public goods game with history table
 1. Rooms, labels
 1. Widgets
-1. **PROJECT**: Ultimatum game
 
 ### Friday (June 5)
 
 1. Live Pages
 1. `js_vars`
 1. **PROJECT**: Surveillance game
-1. **BREAKOUT**: Build a "Live Poll" — players vote on a question and see results update in real-time
 1. **PROJECT**: Conjoint experiment with sentinel fields
 1. `ExtraModel`, Custom exports
 1. Session configs
