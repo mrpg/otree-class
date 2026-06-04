@@ -28,7 +28,12 @@ SESSION_CONFIGS = [
     ),
     dict(
         name="pd",
-        app_sequence=["pd"],
+        app_sequence=["pd", "dropout"],  # <- NOTE: dropout handler at the end
+        num_demo_participants=2,
+    ),
+    dict(
+        name="pd_1round",
+        app_sequence=["pd_1round"],
         num_demo_participants=2,
     ),
 ]

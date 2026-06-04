@@ -1,0 +1,14 @@
+{{ block title }}
+    Sorry
+{{ endblock }}
+{{ block content }}
+
+    {% if player.participant.vars.dropout_me %}
+    <p>You dropped out. 😠</p>
+    {% else %}
+    <p>Someone else in your group dropped out. 😔</p>
+    {% endif %}
+
+    {{ next_button }}
+
+{{ endblock }}

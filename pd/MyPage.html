@@ -3,9 +3,69 @@
 {{ endblock }}
 {{ block content }}
 
-    <p>This is <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+    <div class="row">
+        <div class="col-6">
+            <p>This is <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+            {{ formfields }}
+        </div>
+        <div class="col-6">
+            {{ chat }}
+        </div>
+    </div>
 
-    {{ formfields }}
     {{ next_button }}
+
+    {% if player.round_number > 1 %}
+
+    <hr>
+
+    <h3>History</h3>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">
+                    Round
+                </th>
+                <th scope="col">
+                    Player 1
+                    {% if player.id_in_group == 1 %}
+                    (You)
+                    {% endif %}
+                </th>
+                <th scope="col">
+                    Player 2
+                    {% if player.id_in_group == 2 %}
+                    (You)
+                    {% endif %}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in group.history %}
+            <tr>
+                <th scope="row">
+                    {{ data.round }}
+                </th>
+                <td>
+                    {% if data.player1 %}
+                    Cooperated
+                    {% else %}
+                    Defected
+                    {% endif %}
+                </td>
+                <td>
+                    {% if data.player2 %}
+                    Cooperated
+                    {% else %}
+                    Defected
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
 
 {{ endblock }}
