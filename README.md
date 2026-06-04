@@ -4,7 +4,7 @@ Example apps developed in my course on oTree held at The University of Melbourne
 
 The class will be held via Zoom on June 1, 2, 3, 4, and 5 (3 PM AET).
 
-This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`.
+This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`, `dictator_game`, `ultimatum_game`, `pd`, `pd_1round`, `dropout`.
 
 ## Useful links
 
@@ -73,24 +73,24 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 
 1. Paying for one or all rounds
 1. `participant.vars`, shortcuts
-1. Basic timeouts
+1. Basic timeouts, `devserver` vs `prodserver`
 1. Chats
 1. Templating with `if` and `for`
 1. **PROJECT**: Public goods game with chat and history table
 1. Rooms, labels
-1. Dropout handling, `devserver` vs `prodserver`
-1. Widgets
+1. Dropout handling
 
-### Friday (June 5)
+### Wednesday (June 10)
 
+1. Raw widgets
 1. Live Pages
 1. `js_vars`
 1. **PROJECT**: Surveillance game
-1. **PROJECT**: Conjoint experiment with sentinel fields
+1. Sentinel fields
 1. `ExtraModel`, Custom exports
 1. Session configs
-1. Using coding agents (Claude Code) with oTree projects
-1. Alternatives to oTree, [uproot](https://uproot.science/)
+1. Using coding agents (Claude Code and Codex) with oTree projects
+1. [uproot](https://uproot.science/)
 
 ## Running this project
 
