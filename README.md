@@ -74,11 +74,11 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Paying for one or all rounds
 1. `participant.vars`, shortcuts
 1. Basic timeouts
-1. Dropout handling, `devserver` vs `prodserver`
 1. Chats
 1. Templating with `if` and `for`
-1. **PROJECT**: Public goods game with history table
+1. **PROJECT**: Public goods game with chat and history table
 1. Rooms, labels
+1. Dropout handling, `devserver` vs `prodserver`
 1. Widgets
 
 ### Friday (June 5)
