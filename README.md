@@ -2,7 +2,7 @@
 
 Example apps developed in my course on oTree held at The University of Melbourne in 2026. *Note*: This class deals exclusively with oTree 5.11.5.
 
-The class will be held via Zoom on June 1, 2, 3, 4, and 5 (3 PM AET).
+The class will be held via Zoom on June 1–4 (3 PM AET), and June 10 (10 AM AET).
 
 This repository is directly runnable as an oTree project. The app `slides` contains slides with important class information; the remaining apps were developed in the following order: `survey`, `donation`, `dictator_game`, `ultimatum_game`, `pd`, `pd_1round`, `dropout`.
 
