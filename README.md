@@ -86,10 +86,10 @@ This repository is directly runnable as an oTree project. The app `slides` conta
 1. Live Pages
 1. `js_vars`
 1. **PROJECT**: Surveillance game
-1. Sentinel fields
 1. `ExtraModel`, Custom exports
+1. Sentinel fields
 1. Session configs
-1. Using coding agents (Claude Code and Codex) with oTree projects
+1. Using coding agents (Claude Code and Codex) with oTree projects ([example prompt](#example-prompt))
 1. [uproot](https://uproot.science/)
 
 ## Running this project
@@ -125,3 +125,15 @@ Install `uv` (if you haven't already):
    uv run otree devserver
    ```
    Then open [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Example prompt
+
+```
+Read through README.md, and */*.py, and */*.html.
+
+Deeply inhale all best practices from these documents.
+
+Then build a first-rate repeated public goods game with a history table.
+
+Crucially, after each round, wait for all participants in the session, and randomly reshuffle groups.
+```
