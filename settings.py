@@ -41,6 +41,11 @@ SESSION_CONFIGS = [
         app_sequence=["instruction_modal"],
         num_demo_participants=1,
     ),
+    dict(
+        name="public_goods",
+        app_sequence=["public_goods"],
+        num_demo_participants=3,
+    ),
 ]
 
 ROOMS = [

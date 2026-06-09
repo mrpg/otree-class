@@ -1,0 +1,15 @@
+{{ block title }}
+    Results
+{{ endblock }}
+{{ block content }}
+
+    <p>This was <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+
+    <p>You contributed <b>{{ player.contribution }}</b>.</p>
+    <p>The group's total contribution was <b>{{ group.total_contribution }}</b>.</p>
+    <p>Each group member receives <b>{{ group.individual_share }}</b> from the public good.</p>
+    <p><b>Your payoff is {{ player.payoff }}.</b></p>
+
+    {{ next_button }}
+
+{{ endblock }}

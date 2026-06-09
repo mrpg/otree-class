@@ -1,0 +1,46 @@
+{{ block title }}
+    Contribute
+{{ endblock }}
+{{ block content }}
+
+    <p>This is <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+
+    <p>
+        You have an endowment of <b>{{ C.ENDOWMENT }}</b>.
+        You can contribute any amount to the public good.
+        The total contribution is multiplied by {{ C.MULTIPLIER }} and divided equally among the {{ C.PLAYERS_PER_GROUP }} group members.
+    </p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+    {% if player.round_number > 1 %}
+
+    <hr>
+
+    <h3>History</h3>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Round</th>
+                <th scope="col">Your contribution</th>
+                <th scope="col">Group total</th>
+                <th scope="col">Your payoff</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in player.history %}
+            <tr>
+                <th scope="row">{{ data.round }}</th>
+                <td>{{ data.contribution }}</td>
+                <td>{{ data.total }}</td>
+                <td>{{ data.payoff }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
+
+{{ endblock }}
