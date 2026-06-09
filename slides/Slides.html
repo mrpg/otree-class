@@ -1,127 +1,261 @@
 {{ block title }}
 Slides for oTree @ Melbourne (2026)
 {{ endblock }}
+
+{{ block styles }}
+    <link rel="stylesheet" href="{{ static 'tabs.css' }}">
+{{ endblock }}
+
+{{ block scripts }}
+    <script defer src="{{ static 'tabs.js' }}"></script>
+{{ endblock }}
+
 {{ block content }}
 
-    <style>
-        @import url("{{ static 'tabs/tabs.css' }}");
-
-        .otree-title {
-            display: none;
-        }
-        #tabs {
-            margin-top: 1em;
-        }
-    </style>
-
-    <script src="{{ static 'tabs/tabs.js' }}"></script>
-
-    <script>
-        $(document).ready(function () {
-            tabinit();
-            tabshow(1);
-        });
-    </script>
-
-    <div id="tabs">
-        <button type="button" data-tab="1" class="tab">Breakouts</button>
-        <button type="button" data-tab="2" class="tab">1</button>
-        <button type="button" data-tab="3" class="tab">2</button>
-        <button type="button" data-tab="4" class="tab">3</button>
-        <button type="button" data-tab="5" class="tab">4</button>
-        <button type="button" data-tab="6" class="tab">5</button>
-        <button type="button" data-tab="7" class="tab">6</button>
-    </div>
-
-    <div class="tabbable" id="tabbable1">
-        <h4>Breakout Tasks</h4>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Task</th>
-                    <th>What to build</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>Mon</b></td>
-                    <td>Fun Facts Quiz</td>
-                    <td>A single-page app with 3 creative trivia questions using different field types</td>
-                </tr>
-                <tr>
-                    <td><b>Tue</b></td>
-                    <td>Product Rating</td>
-                    <td>A treatment (set in <code>creating_session</code>) changes the product shown; players rate it 1&ndash;5</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="tabbable" id="tabbable2">
-        <ul>
-            <li><b>Welcome!</b></li>
-            <li>Please install uv and VS Code. See <a href="https://github.com/mrpg/otree-class">here</a>.</li>
-        </ul>
-    </div>
-
-    <div class="tabbable" id="tabbable3">
-        <ul>
-            <li><a href="https://otree.readthedocs.io/en/latest/conceptual_overview.html">oTree’s conceptual overview</a></li>
-            <li><a href="https://getbootstrap.com/docs/5.3/utilities/spacing/">Bootstrap margins</a></li>
-            <li><code>vars_for_template</code> is banned! You don’t need it. Use <code>@property</code>!</li>
-        </ul>
-    </div>
-
-    <div class="tabbable" id="tabbable4">
-        <ul>
-            <li><a href="https://otree.readthedocs.io/en/latest/models.html">More on fields</a></li>
-            <li>Never use initial with random</li>
-            <li><a href="https://otree.readthedocs.io/en/latest/multiplayer/groups.html#getting-other-players">Roles, etc.</a></li>
-        </ul>
-    </div>
-
-    <div class="tabbable" id="tabbable5">
-        <ul>
-            <li><b>RULE</b>: If a timeout happens, then the fields associated with the page on which the timeout
-                happened are set to the <i>default value</i> of the associated type&mdash;but only if the field
-                was previously <code>None</code>. For example, a <code>BooleanField</code> has the associated type
-            <code>bool</code>, which has the default value <code>bool() == False</code>.</li>
-            <li>Note: Dropout handling can be augmented with <code>app_after_this_page</code>.</li>
-            <li>The <code>devserver</code> does not notice timeouts when the browser tab is closed, but the
-            <code>prodserver</code> does.</li>
-        </ul>
-    </div>
-
-    <div class="tabbable" id="tabbable6">
-        <ul>
-            <li>Ignore the Big Data Tab; except for Chat Logs, Page Times, and custom exports. Use the per-session Data Tab instead.</li>
-            <li>Use Sessions Tab to run proper sessions; or use a Room.</li>
-            <li>Sessions created using the Sessions Tab do not have the split-screen view!</li>
-            <li>You can <b>always</b> add <code>?participant_label=something</code> to a participant room URL, even if the room does not expect labels.</li>
-            <li>On Prolific: append <code>?participant_label={&#123;%PROLIFIC_PID%&#125;}</code> to participant room URL</li>
-            <li>Reopening that URL with the label leads the participant back to their page!</li>
-            <li><a href="https://max.pm/posts/label_generator/">oTree Label Generator</a></li>
-            <li>Completely ignore <code>use_secure_urls=True</code>!</li>
-            <li>Ascertaining who is “present” is not an exact science, do not take it totally seriously! <i>Believing your own hype will kill you …</i></li>
-            <li><a href="https://otree.readthedocs.io/en/latest/forms.html#widgets">Widgets</a></li>
-            <li><a href="https://otree.readthedocs.io/en/latest/forms.html#raw-html-widgets">Raw HTML widgets</a></li>
-            <li>Use the Web Developer/DevTools! (Ctrl+Shift+i on Windows/Linux)</li>
-        </ul>
-    </div>
-
-    <div class="tabbable" id="tabbable7">
-        <ul>
-            <li>Always give Claude Code something to work from.</li>
-            <li>Custom data exports can also be used in normal experiments if you do not want to reshape your data in R, Stata, etc.</li>
-            <li><a href="https://gitlab.com/gr0ssmann/otree_slider">Max’s sliders</a></li>
-            <li>Manual grouping: (i) <a href="https://otree.readthedocs.io/es/latest/multiplayer/groups.html#set-group-matrix">set_group_matrix</a>, (ii) <a href="https://otree.readthedocs.io/en/latest/multiplayer/waitpages.html#group-by-arrival-time">group_by_arrival_time</a></li>
-            <li>Measuring response times: <code>time.time()</code>, <code>time.perf_counter()</code>, or JavaScript <code>performance</code></li>
-            <li>Use <a href="https://uproot.science/">uproot</a>!</li>
+    <div class="tabs-page" data-tabs>
+        <ul class="nav nav-tabs tabs-page__nav" id="tabs" role="tablist" aria-label="Slide tabs">
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active"
+                    id="tab-1"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-1"
+                    aria-selected="true"
+                    data-tab-target="tab-panel-1"
+                >
+                    Breakouts
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-2"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-2"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-2"
+                >
+                    1
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-3"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-3"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-3"
+                >
+                    2
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-4"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-4"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-4"
+                >
+                    3
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-5"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-5"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-5"
+                >
+                    4
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-6"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-6"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-6"
+                >
+                    5
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-7"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-7"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-7"
+                >
+                    6
+                </button>
+            </li>
         </ul>
 
-        {{ formfields }}
-        {{ next_button }}
+        <div class="tab-content tabs-page__content">
+            <section
+                class="tab-pane show active"
+                id="tab-panel-1"
+                role="tabpanel"
+                aria-labelledby="tab-1"
+                data-tab-panel
+                tabindex="0"
+            >
+                <h4>Breakout Tasks</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Task</th>
+                            <th>What to build</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Mon</b></td>
+                            <td>Fun Facts Quiz</td>
+                            <td>A single-page app with 3 creative trivia questions using different field types</td>
+                        </tr>
+                        <tr>
+                            <td><b>Tue</b></td>
+                            <td>Product Rating</td>
+                            <td>A treatment (set in <code>creating_session</code>) changes the product shown; players rate it 1&ndash;5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-2"
+                role="tabpanel"
+                aria-labelledby="tab-2"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <ul>
+                    <li><b>Welcome!</b></li>
+                    <li>Please install uv and VS Code. See <a href="https://github.com/mrpg/otree-class">here</a>.</li>
+                </ul>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-3"
+                role="tabpanel"
+                aria-labelledby="tab-3"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <ul>
+                    <li><a href="https://otree.readthedocs.io/en/latest/conceptual_overview.html">oTree's conceptual overview</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.3/utilities/spacing/">Bootstrap margins</a></li>
+                    <li><code>vars_for_template</code> is banned! You don't need it. Use <code>@property</code>!</li>
+                </ul>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-4"
+                role="tabpanel"
+                aria-labelledby="tab-4"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <ul>
+                    <li><a href="https://otree.readthedocs.io/en/latest/models.html">More on fields</a></li>
+                    <li>Never use initial with random</li>
+                    <li><a href="https://otree.readthedocs.io/en/latest/multiplayer/groups.html#getting-other-players">Roles, etc.</a></li>
+                </ul>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-5"
+                role="tabpanel"
+                aria-labelledby="tab-5"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <ul>
+                    <li><b>RULE</b>: If a timeout happens, then the fields associated with the page on which the timeout
+                        happened are set to the <i>default value</i> of the associated type&mdash;but only if the field
+                        was previously <code>None</code>. For example, a <code>BooleanField</code> has the associated type
+                    <code>bool</code>, which has the default value <code>bool() == False</code>.</li>
+                    <li>Note: Dropout handling can be augmented with <code>app_after_this_page</code>.</li>
+                    <li>The <code>devserver</code> does not notice timeouts when the browser tab is closed, but the
+                    <code>prodserver</code> does.</li>
+                </ul>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-6"
+                role="tabpanel"
+                aria-labelledby="tab-6"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <ul>
+                    <li>Ignore the Big Data Tab; except for Chat Logs, Page Times, and custom exports. Use the per-session Data Tab instead.</li>
+                    <li>Use Sessions Tab to run proper sessions; or use a Room.</li>
+                    <li>Sessions created using the Sessions Tab do not have the split-screen view!</li>
+                    <li>You can <b>always</b> add <code>?participant_label=something</code> to a participant room URL, even if the room does not expect labels.</li>
+                    <li>On Prolific: append <code>?participant_label={&#123;%PROLIFIC_PID%&#125;}</code> to participant room URL</li>
+                    <li>Reopening that URL with the label leads the participant back to their page!</li>
+                    <li><a href="https://max.pm/posts/label_generator/">oTree Label Generator</a></li>
+                    <li>Completely ignore <code>use_secure_urls=True</code>!</li>
+                    <li>Ascertaining who is "present" is not an exact science, do not take it totally seriously! <i>Believing your own hype will kill you …</i></li>
+                    <li><a href="https://otree.readthedocs.io/en/latest/forms.html#widgets">Widgets</a></li>
+                    <li><a href="https://otree.readthedocs.io/en/latest/forms.html#raw-html-widgets">Raw HTML widgets</a></li>
+                    <li>Use the Web Developer/DevTools! (Ctrl+Shift+i on Windows/Linux)</li>
+                </ul>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-7"
+                role="tabpanel"
+                aria-labelledby="tab-7"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <ul>
+                    <li>Always give Claude Code something to work from.</li>
+                    <li>Custom data exports can also be used in normal experiments if you do not want to reshape your data in R, Stata, etc.</li>
+                    <li><a href="https://gitlab.com/gr0ssmann/otree_slider">Max's sliders</a></li>
+                    <li>Manual grouping: (i) <a href="https://otree.readthedocs.io/es/latest/multiplayer/groups.html#set-group-matrix">set_group_matrix</a>, (ii) <a href="https://otree.readthedocs.io/en/latest/multiplayer/waitpages.html#group-by-arrival-time">group_by_arrival_time</a></li>
+                    <li>Measuring response times: <code>time.time()</code>, <code>time.perf_counter()</code>, or JavaScript <code>performance</code></li>
+                    <li>Use <a href="https://uproot.science/">uproot</a>!</li>
+                </ul>
+
+                {{ formfields }}
+                <div class="tabs-page__submit">
+                    {{ next_button }}
+                </div>
+            </section>
+        </div>
     </div>
 
 {{ endblock }}
