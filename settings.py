@@ -36,6 +36,11 @@ SESSION_CONFIGS = [
         app_sequence=["pd_1round"],
         num_demo_participants=2,
     ),
+    dict(
+        name="instruction_modal",
+        app_sequence=["instruction_modal"],
+        num_demo_participants=1,
+    ),
 ]
 
 ROOMS = [
