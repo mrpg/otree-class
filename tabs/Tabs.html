@@ -1,0 +1,150 @@
+{{ block title }}
+{{ endblock }}
+
+{{ block styles }}
+    <link rel="stylesheet" href="{{ static 'tabs.css' }}">
+{{ endblock }}
+
+{{ block scripts }}
+    <script defer src="{{ static 'tabs.js' }}"></script>
+{{ endblock }}
+
+{{ block content }}
+
+    <div class="tabs-page" data-tabs>
+        <ul class="nav nav-tabs tabs-page__nav" id="tabs" role="tablist" aria-label="Question tabs">
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active"
+                    id="tab-1"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-1"
+                    aria-selected="true"
+                    data-tab-target="tab-panel-1"
+                >
+                    1
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-2"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-2"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-2"
+                >
+                    2
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-3"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-3"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-3"
+                >
+                    3
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-4"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-4"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-4"
+                >
+                    4
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="tab-5"
+                    type="button"
+                    role="tab"
+                    aria-controls="tab-panel-5"
+                    aria-selected="false"
+                    data-tab-target="tab-panel-5"
+                >
+                    5
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content tabs-page__content">
+            <section
+                class="tab-pane show active"
+                id="tab-panel-1"
+                role="tabpanel"
+                aria-labelledby="tab-1"
+                data-tab-panel
+                tabindex="0"
+            >
+                <p>1</p>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-2"
+                role="tabpanel"
+                aria-labelledby="tab-2"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <p>2</p>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-3"
+                role="tabpanel"
+                aria-labelledby="tab-3"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <p>3</p>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-4"
+                role="tabpanel"
+                aria-labelledby="tab-4"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <p>4</p>
+            </section>
+
+            <section
+                class="tab-pane"
+                id="tab-panel-5"
+                role="tabpanel"
+                aria-labelledby="tab-5"
+                data-tab-panel
+                tabindex="0"
+                hidden
+            >
+                <p>5</p>
+
+                {{ formfields }}
+                <div class="tabs-page__submit">
+                    {{ next_button }}
+                </div>
+            </section>
+        </div>
+    </div>
+
+{{ endblock }}
