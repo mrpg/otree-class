@@ -1,0 +1,80 @@
+{{ block title }}
+    Choose a side
+{{ endblock }}
+{{ block content }}
+
+    <p>This is <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+
+    <p>You are the <b>{{ player.role }}</b>.
+
+    {% if player.is_matcher %}
+        You win <b>{{ C.STAKE }}</b> if both players choose the same side.
+    {% else %}
+        You win <b>{{ C.STAKE }}</b> if the two players choose different sides.
+    {% endif %}
+    </p>
+
+    <table class="table table-bordered text-center" style="max-width: 320px;">
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Mismatcher</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Heads</th>
+                <th>Tails</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Heads</th>
+                <td>{{ C.STAKE }}, 0</td>
+                <td>0, {{ C.STAKE }}</td>
+            </tr>
+            <tr>
+                <th>Tails</th>
+                <td>0, {{ C.STAKE }}</td>
+                <td>{{ C.STAKE }}, 0</td>
+            </tr>
+        </tbody>
+        <caption class="text-muted" style="caption-side: bottom;">Payoffs shown as (Matcher, Mismatcher).</caption>
+    </table>
+
+    {{ formfields }}
+    {{ next_button }}
+
+    {% if player.round_number > 1 %}
+
+    <hr>
+
+    <h3>History</h3>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Round</th>
+                <th scope="col">You</th>
+                <th scope="col">Partner</th>
+                <th scope="col">Outcome</th>
+                <th scope="col">Payoff</th>
+                <th scope="col">Cumulative</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in player.history %}
+            <tr>
+                <th scope="row">{{ row.round }}</th>
+                <td>{% if row.your_choice %}Heads{% else %}Tails{% endif %}</td>
+                <td>{% if row.partner_choice %}Heads{% else %}Tails{% endif %}</td>
+                <td>{% if row.is_match %}Match{% else %}Mismatch{% endif %}</td>
+                <td>{{ row.payoff }}</td>
+                <td>{{ row.cumulative }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
+
+{{ endblock }}

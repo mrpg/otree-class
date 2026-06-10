@@ -1,0 +1,43 @@
+{{ block title }}
+    Please create a diary entry
+{{ endblock }}
+{{ block content }}
+
+    {% if player.role == C.ROLE_DIARIST %}
+    <p>Careful: You’re being watched!</p>
+    {% else %}
+    <p>You are watching the other player.</p>
+    {% endif %}
+
+    {{ formfield_errors "sentinel" }}
+
+    <textarea
+        id="diary-entry" name="diary_entry" class="form-control w-100 mb-3" rows="8"
+        {% if player.role == C.ROLE_OBSERVER %}
+        readonly
+        {% endif %}
+        ></textarea>
+
+    <input type="hidden" name="sentinel" value="1">
+    
+    {{ next_button }}
+
+    <script>
+        // kebab-case (HTML, CSS)
+        // snake_case (Python)
+        // camelCase  (JavaScript)
+        // CamelCase  (Python classes)
+
+        const myTextarea = document.querySelector("#diary-entry");
+        myTextarea.value = js_vars.current_entry;
+
+        myTextarea.oninput = () => {
+            liveSend(myTextarea.value);
+        };
+
+        function liveRecv(data) {
+            myTextarea.value = data;
+        }
+    </script>
+
+{{ endblock }}

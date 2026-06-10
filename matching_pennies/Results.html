@@ -1,0 +1,22 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+    <p>This was <b>round {{ player.round_number }}</b> out of {{ C.NUM_ROUNDS }}.</p>
+
+    <p>You chose <b>{% if player.choice %}Heads{% else %}Tails{% endif %}</b>.</p>
+
+    <p>Your partner chose <b>{% if player.partner.choice %}Heads{% else %}Tails{% endif %}</b>.</p>
+
+    {% if player.choice == player.partner.choice %}
+    <p>The choices <b>matched</b>.</p>
+    {% else %}
+    <p>The choices <b>did not match</b>.</p>
+    {% endif %}
+
+    <p><b>Your payoff is {{ player.payoff }}.</b></p>
+
+    {{ next_button }}
+{{ endblock }}

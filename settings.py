@@ -51,6 +51,17 @@ SESSION_CONFIGS = [
         app_sequence=["tabs"],
         num_demo_participants=1,
     ),
+    dict(
+        name="matching_pennies",
+        app_sequence=["matching_pennies"],
+        num_demo_participants=2,
+    ),
+    dict(
+        name="diary",
+        app_sequence=["diary"],
+        num_demo_participants=2,
+        min_length=10,  # Session config - minimum length of diary entry
+    ),
 ]
 
 ROOMS = [
